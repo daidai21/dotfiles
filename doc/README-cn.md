@@ -44,6 +44,12 @@
 
 - [mathiasbynens/dotfiles | Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [alrra/dotfiles | macOS / Ubuntu dotfiles](https://github.com/alrra/dotfiles)
+- [dotfiles](http://dotfiles.github.io/)
+##### 配置参考文档
+
+- [tmux manual page](http://man.openbsd.org/OpenBSD-current/man1/tmux.1#NAME)
+- [Tmux使用手册](http://louiszhai.github.io/2017/09/30/tmux/#%E5%AF%BC%E8%AF%BB)
+
 
 ### 贡献者
 

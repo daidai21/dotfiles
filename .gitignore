@@ -1,3 +1,4 @@
-# setting ignore file
+# Setting Ignore Files
 
-.DS_Store
+.DS_Store  # Mac file
+

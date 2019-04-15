@@ -1,1 +1,1 @@
-# 暂时是自动生成的
+# using automatically generated now, it will be update
