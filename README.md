@@ -4,8 +4,10 @@
 
 ### 参考链接
 
-- [vim教程网](https://vim.ink/)
 - [所需即所获：像 IDE 一样使用 vim](https://github.com/yangyangwithgnu/use_vim_as_ide)
+- https://github.com/ma6174/vim-deprecated/blob/master/.vimrc
+- https://github.com/wklken/k-vim/blob/master/vimrc
+- https://vimawesome.com/
 
 ### VIM 插件管理工具
 
