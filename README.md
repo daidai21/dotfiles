@@ -22,3 +22,9 @@
 
 
 安装插件管理器
+
+### 安装
+
+```bash
+wget -q0- https://github.com/daidai21/dotfiles/tree/tmp/install.sh | sh -x
+```
