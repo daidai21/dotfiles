@@ -9,6 +9,9 @@
 - https://github.com/wklken/k-vim/blob/master/vimrc
 - https://vimawesome.com/
 
+- https://exvim.github.io/docs-zh/intro/
+- https://vimcn.github.io/
+
 ### VIM 插件管理工具
 
 - Vundle
