@@ -8,26 +8,18 @@
 
 
 
-" 设置
-
-
-
-
 " =============================================================================
 " 编辑设置
 " =============================================================================
 
 
-" 显示相关
-
+" ***** 显示相关 *****
 " 显示行号
 set number
 " 突出显示当前行
 set cursorline
 " 突出显示当前列
 set cursorcolumn
-" 显示空格和tab键
-set listchars=tab:>-,trail:-
 " 总是显示状态栏
 set laststatus=2
 " 显示光标当前位置
@@ -36,24 +28,15 @@ set ruler
 set showmatch
 " 打开语法高亮显示
 syntax on
+" 设置双宽显示,防止有些字体显示不全
+set ambiwidth=double 
 
 
-" 编辑相关
-
+" ***** 编辑相关 *****
 " 设置Tab长度为4空格
 set tabstop=4
 " 设置自动缩进长度为4空格
 set shiftwidth=4
-
-
-" 编码相关
-
-" 写入文件时采用的编码类型
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-" 设置输出到终端时采用的编码类型
-set termencoding=utf-8
-" 设置缓存的文本、寄存器、Vim 脚本文件等编码
-set encoding=utf-8
 " 继承前一行的缩进方式，适用于多行注释
 set autoindent
 " 设置粘贴模式
@@ -71,37 +54,31 @@ set nofoldenable
 " 自动缩进
 set smartindent
 
+" ***** 编码相关 *****
+" 写入文件时采用的编码类型
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+" 设置输出到终端时采用的编码类型
+set termencoding=utf-8
+" 设置缓存的文本、寄存器、Vim 脚本文件等编码
+set encoding=utf-8
 
-" 搜索相关
-
+" ***** 搜索相关 *****
 " 搜索结果高亮
 set hlsearch
 
-
-" 文件相关
-
-" 打开文件的时候进行类型检测
+" ***** 文件相关 *****
+" 必须的 打开文件的时候进行类型检测
 filetype plugin indent on
 " 打开文件类型检测
 filetype on
 
-
-" 其他设置
-
+" ***** 其他设置 *****
 " 让vimrc配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 " 启用鼠标
 set mouse=a
 set selection=exclusive
-set selectmode=mouse, key
-
-
-
-
-" =============================================================================
-" 编辑设置
-" =============================================================================
-
+" set selectmode=mouse, key
 
 
 " =============================================================================
@@ -109,108 +86,173 @@ set selectmode=mouse, key
 " =============================================================================
 
 
-" molokai.vim
-
-
 " =============================================================================
 " 插件管理
 " =============================================================================
 
 
-" TODO bug
-
-" YouCompleteMe
-" vim-gutentags
-" NERDTree
-" Molokai
-
-
-call vundle  " begin()
-
-Plugin 'VundleVim/Vundle.vim'  " 启用vundle管理插件，必须
+" 必须的
+set nocompatible
+" 将运行时路径设置为包含Vundle并初始化
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" 插件设置位置
+" ***** 开始 *****
+" 必须的 让Vundle管理Vundle
+Plugin 'VundleVim/Vundle.vim'
+" 目录树
+Plugin 'scrooloose/nerdtree'
+autocmd VimEnter * NERDTree  " 自动开启NERDTree
+map <F2> :NERDTreeToggle<CR> " 按下F2调出/隐藏NERDTree
+" 自动补全插件
 Plugin 'Valloric/YouCompleteMe'
+" 状态栏
+Plugin 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1  "tabline中当前buffer两端的分隔字符
+let g:airline#extensions#tabline#left_sep = ' '  "tabline中未激活buffer两端的分隔字符
+let g:airline#extensions#tabline#left_alt_sep = '|'  "tabline中buffer显示编号
+let g:airline#extensions#tabline#buffer_nr_show = 1
+" 状态栏主题
+Plugin 'vim-airline/vim-airline-themes'
+" let g:airline_powerline_fonts = 1  " 设置字体
+set t_Co=256 " 状态栏颜色
+let g:airline_theme='molokai'  " 选择主题
+" 语法检查
+Plugin 'vim-syntastic/syntastic'
+" 拥有python几乎所有IDE的功能，吐血推荐 ，杀手级python插件
+" Plugin 'klen/python-mode'  " 有bug
+" 搜索插件
+" Plugin 'haya14busa/incsearch.vim'
+" 模糊搜索，自带搜索比较弱，这个模糊搜索很快速
+" Plugin 'haya14busa/incsearch-fuzzy.vim'
+" 文件缩略图  但是使用TagBar之前先确保已经有ctags
+Plugin 'majutsushi/tagbar'
+map <F8> :TagbarToggle<CR>  " F8打开
+let g:tagbar_width=30  " 设置tagbar的窗口宽度
+let g:tagbar_ctags_bin='/usr/bin/ctags'  "设置tagbar使用的ctags的插件,必须要设置对
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()  " 打开文件自动 打开tagbar
+" 代码缩进显示
+Bundle 'Yggdroot/indentLine'
+let g:indentLine_char='┆'  " 设置缩进分隔符
+let g:indentLine_enabled = 1  " 开启插件
+" Python语法检查
+" Plugin 'nvie/vim-flake8'
+" 自动补全括号引号等
+Plugin 'jiangmiao/auto-pairs'
 
-"在此增加其他插件，安装的插件需要放在vundle#begin和vundle#end之间"
-"安装github上的插件格式为 Plugin '用户名/插件仓库名'"
-
-call vundle  " end()
+" ***** 结束 *****
+call vundle#end()
 
 
 " =============================================================================
-" 语言配置
+" 创建文件自动插入头部
 " =============================================================================
 
 
-
-" =============================================================================
-" 新文件头部
-" =============================================================================
-
-
-" 新建.c .h .cpp .hpp .sh .java .py 文件，自动插入文件头
-autocmd BufNewFile *.cpp,*.[ch],*.sh,*.rb,*.java,*.py exec ":call SetTitle()" 
+" 新建.c .h .cpp .hpp .cc .sh .java .py 文件，自动插入文件头
+autocmd BufNewFile *.c,*.h,*.cpp,*.hpp,*.cc,*.sh,*.java,*.py exec ":call SetTitle()" 
 " 定义函数SetTitle，自动插入文件头 
 func SetTitle()
     " bash 语言
-    " 如果文件类型为.sh文件 
-    if &filetype == 'sh' 
+    if expand("%:e") == 'sh'
         call setline(1,"\#!/bin/bash")
         call append(line("."), "")
-        call append(line(".")+1, "# ********************************************************************************")
-        call append(line(".")+2, "    > File Name: ".expand("%")")
-        call append(line(".")+3, "    > Author: DaiDai") 
-        call append(line(".")+4, "    > Mail: daidai4269@aliyun.com") 
-        call append(line(".")+5, "    > Created Time: ".strftime("%c"))
-        call append(line(".")+6, "# ********************************************************************************")
-        call append(line(".")+7, ""))
+        call append(line(".")+1, "# ================================================================================")
+        call append(line(".")+2, "# File Name: ".expand("%"))
+        call append(line(".")+3, "# Author: DaiDai")
+        call append(line(".")+4, "# Mail: daidai4269@aliyun.com") 
+        call append(line(".")+5, "# Created Time: ".strftime("%c"))
+        call append(line(".")+6, "# ================================================================================")
+        call append(line(".")+7, "")
         call append(line(".")+8, "")
     endif
     " python 语言
-    " 如果文件类型为.py文件
     if expand("%:e") == 'py'
         call setline(1,"#!/usr/bin/python")
-        call append(line("."),"# coding:utf-8")
+        call append(line("."),"# -*- coding:utf-8 -*-")
         call append(line(".")+1, "")
         call append(line(".")+2, "")
-        call append(line(".")+3, "# ********************************************************************************") 
-        call append(line(".")+4, "    > File Name: ".expand("%")) 
-        call append(line(".")+5, "    > Author: DaiDai") 
-        call append(line(".")+6, "    > Mail: daidai4269@aliyun.com") 
-        call append(line(".")+7, "    > Created Time: ".strftime("%c"))
-        call append(line(".")+8, "# ********************************************************************************") 
+        call append(line(".")+3, "# ================================================================================") 
+        call append(line(".")+4, "# File Name: ".expand("%")) 
+        call append(line(".")+5, "# Author: DaiDai") 
+        call append(line(".")+6, "# Mail: daidai4269@aliyun.com") 
+        call append(line(".")+7, "# Created Time: ".strftime("%c"))
+        call append(line(".")+8, "# ================================================================================") 
         call append(line(".")+9, "")
-    " 如果文件类型为.cpp文件
+    endif
     " C++ 语言
     if expand("%:e") == 'cpp'
-        call append(line(".")+6, "#include<iostream>")
-        call append(line(".")+7, "using namespace std;")
+        call setline(1,"/* ================================================================================")
+        call append(line("."),"> File Name: ".expand("%"))
+        call append(line(".")+1, "> Author: DaiDai") 
+        call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
+        call append(line(".")+3, "> Created Time: ".strftime("%c"))
+        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+5, "")
+        call append(line(".")+6, "")
+        call append(line(".")+7, "#include <iostream>")
         call append(line(".")+8, "")
+        call append(line(".")+9, "using namespace std;")
+        call append(line(".")+10, "")
+        call append(line(".")+11, "")
     endif
-    " 如果文件类型为.hpp文件
-    if expand("%:e") == 'cpp'
-        call append(line(".")+6, "#include<iostream>")
-        call append(line(".")+7, "using namespace std;")
+    if expand("%:e") == 'hpp'
+        call setline(1,"/* ================================================================================")
+        call append(line("."),"> File Name: ".expand("%"))
+        call append(line(".")+1, "> Author: DaiDai") 
+        call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
+        call append(line(".")+3, "> Created Time: ".strftime("%c"))
+        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+5, "")
+        call append(line(".")+6, "")
+        call append(line(".")+7, "#include <iostream>")
         call append(line(".")+8, "")
+        call append(line(".")+9, "using namespace std;")
+        call append(line(".")+10, "")
+        call append(line(".")+11, "")
+    endif
+    if expand("%:e") == 'cc'
+        call setline(1,"/* ================================================================================")
+        call append(line("."),"> File Name: ".expand("%"))
+        call append(line(".")+1, "> Author: DaiDai") 
+        call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
+        call append(line(".")+3, "> Created Time: ".strftime("%c"))
+        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+5, "")
+        call append(line(".")+6, "")
+        call append(line(".")+7, "#include <iostream>")
+        call append(line(".")+8, "")
+        call append(line(".")+9, "using namespace std;")
+        call append(line(".")+10, "")
+        call append(line(".")+11, "")
     endif
     " C 语言
-    " 如果文件类型为.c文件
-    if &filetype == 'c'
-        call append(line(".")+6, "#include<stdio.h>")
-        call append(line(".")+7, "")
+    if expand("%:e") == 'c'
+        call setline(1,"/* ================================================================================")
+        call append(line("."),"> File Name: ".expand("%"))
+        call append(line(".")+1, "> Author: DaiDai") 
+        call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
+        call append(line(".")+3, "> Created Time: ".strftime("%c"))
+        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+5, "")
+        call append(line(".")+6, "")
+        call append(line(".")+7, "#include <stdio.h>")
+        call append(line(".")+8, "")
     endif
-    " 如果文件类型为.h文件
     if expand("%:e") == 'h'
-        call append(line(".")+6, "#ifndef _".toupper(expand("%:r"))."_H")
-        call append(line(".")+7, "#define _".toupper(expand("%:r"))."_H")
-        call append(line(".")+8, "#endif")
+        call setline(1,"/* ================================================================================")
+        call append(line("."),"> File Name: ".expand("%"))
+        call append(line(".")+1, "> Author: DaiDai") 
+        call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
+        call append(line(".")+3, "> Created Time: ".strftime("%c"))
+        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+5, "")
+        call append(line(".")+6, "")
+        call append(line(".")+7, "#include <stdio.h>")
+        call append(line(".")+8, "")
     endif
     " Java 语言
-    " 如果文件类型为.java文件
-    if &filetype == 'java'
-        call append(line(".")+6,"public class ".expand("%:r"))
-        call append(line(".")+7,"")
-    endif
-    "新建文件后，自动定位到文件末尾
+    " 新建文件后，自动定位到文件末尾
 endfunc
 autocmd BufNewFile * normal G
 
@@ -220,4 +262,6 @@ autocmd BufNewFile * normal G
 " =============================================================================
 
 
+" TODO:
 
+" F5 run code

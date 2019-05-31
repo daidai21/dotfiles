@@ -1,71 +1,67 @@
-echo "DaiDai, Dotfiles!"
-echo "Support only Ubuntu/Centos/Mac, Sorry!"
+#!/bin/bash
+
+# ================================================================================
+# File Name: install.sh
+# Author: DaiDai
+# Mail: daidai4269@aliyun.com
+# Created Time: Sat May 25 14:54:22 2019
+# ================================================================================
 
 
-# switch to install directory
-cd ~
+# ========== Linux library ==========
 
+sudo apt-get install tree
+sudo apt-get install ssh
+sudo apt-get install rar unrar
+sudo apt-get install openssh-server
+sudo apt-get install autojump
 
-# install ctags
-if which apt-get > /dev/null; then
-    sudo apt-get install ctags
-elif which yum > /dev/null; then
-    sudo yum install ctags
-elif which brew > /dev/null; then
-    brew install ctags
-fi
+# ========== Language ==========
 
+sudo apt-get install ctags build-essential cmake python-dev python3-dev  # vim Plugin rely on
 
-# ctags 软连接
-sudo ln -s /usr/bin/ctags /usr/local/bin/ctags
+# g++
 
+# Cmake
+sudo apt-get install cmake
+# clang
 
-# C++ 相关
-sudo yum install cmake
+# python
+sudo apt-get install mypy  # mypy
 
+# ========== zsh ==========
 
-# install vim
-if which apt-get > /dev/null; then
-    sudo apt-get install vim
-elif which yum > /dev/null; then
-    sudo yum install vim
-elif which brew > /dev/null; then
-    brew install vim
-fi
+# Install Zsh
+sudo apt-get install zsh
+# Install oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+# start-up oh-my-zsh
+zsh
 
+# ========== tmux ==========
 
-# install Vundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+# Install tmux
+sudo apt-get install tmux
+# setting tmux
+rm -rf ~/.tmux.conf
+mv ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+# ========== vim ==========
 
-# install tmux
-if which apt-get > /dev/null; then
-    sudo apt-get install tmux
-elif which yum > /dev/null; then
-    sudo yum install tmux
-elif which yum > /dev/null; then
-    brew install tmux
-else
-    echo "Support only Ubuntu/Centos/Mac, Sorry!"
-fi
+# mv .vimrc file
+rm -rf ~/.vim
+rm ~/.vimrc
+mv ~/dotfiles/.vimrc ~/.vimrc
+# Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# Plugin Install
+echo "Plugin Install Start"
+vim tmp -c "BundleInstall" -c "q" -c "q"
+rm tmp
+~/.vim/bundle/YouCompleteMe/install.py --clang-completer  # Install YouCompleteMe
+echo "Plugin Install Completed!"
 
+# delete dotfiles
+sudo rm -r dotfiles
 
-# install zsh
-if which apt-get > /dev/null; then
-    sudo apt-get install zsh
-elif which yum > /dev/null; then
-    sudo yum install zsh
-elif which brew > /dev/null; then
-    brew install zsh
-else
-    echo "Support onlyy Ubuntu/Centos/Mac, Sorry!"
-fi
-
-
-# install oh-my-zsh
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-
-# Python 相关
-
-sudo pip install flake8 yapf
+echo "DaiDai' dotfiles install Completed!"

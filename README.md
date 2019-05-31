@@ -1,33 +1,56 @@
-# tmp
+<div align=center><h1>DaiDai's dotfiles</h1></div>
 
-- 自己配置vim
+<center><a href="../README.md">English</a> | <a href="doc/README-cn.md">中文</a></center>
 
-### 参考链接
+### Introduction
 
-- [所需即所获：像 IDE 一样使用 vim](https://github.com/yangyangwithgnu/use_vim_as_ide)
-- https://github.com/ma6174/vim-deprecated/blob/master/.vimrc
-- https://github.com/wklken/k-vim/blob/master/vimrc
-- https://vimawesome.com/
+<div align=center><img src="doc/img/logo.png"/></div>
 
-- https://exvim.github.io/docs-zh/intro/
-- https://vimcn.github.io/
+`DaiDai's dotfiles` is a configuration file that creates a development environment with just one line of command.
 
-### VIM 插件管理工具
+### Renderings
 
-- Vundle
+![暂无]()
 
-### 安排
+### Features
 
-基础配置没有完成
-基础配置没有测试 
+| 特性 | 描述 |
+| :-: | :-: |
+| Vim |  |
+| Zsh |  |
+| Tmux |  |
 
-渲染文件配置
+### Project Architecture
 
+暂无
 
-安装插件管理器
+### Supporting Environment
 
-### 安装
+`Ubuntu` & `Mac OS`
 
-```bash
-wget -q0- https://github.com/daidai21/dotfiles/tree/tmp/install.sh | sh -x
-```
+### Using Method
+
+暂无
+
+### FAQ
+
+暂无
+
+### Version
+
+暂无
+
+### Link
+
+- [mathiasbynens/dotfiles | Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [alrra/dotfiles | macOS / Ubuntu dotfiles](https://github.com/alrra/dotfiles)
+
+### Contributors
+
+<!-- 感谢以下人员对本仓库做出的贡献，当然不仅仅只有这些贡献者，这里就不一一列举了。如果你希望被添加到这个名单中，并且提交过 Issue 或者 PR，请与我联系。 -->
+
+![暂无]()
+
+### Copyright
+
+Copyright to all individuals, reproduced please indicate the source!`Github@daidai21`
