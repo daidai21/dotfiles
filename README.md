@@ -12,44 +12,52 @@
 
 ![暂无]()
 
-### Features
+- vim插件管理工具使用的是Vundle
+- Supporting Environment `Ubuntu` & `Mac OS`
+- 自动安装zsh, tmux, vim, g++, clang, ssh, etc.
 
-| 特性 | 描述 |
-| :-: | :-: |
-| Vim |  |
-| Zsh |  |
-| Tmux |  |
+### 安装
 
-### Project Architecture
+```shell
+cd ~ && git clone -b tmp https://github.com/daidai21/dotfiles && cd ~/dotfiles && sudo install.sh
+```
 
-暂无
+### 功能
 
-### Supporting Environment
+##### zsh
 
-`Ubuntu` & `Mac OS`
+```shell
+zsh  # 使用oh-my-zsh
+```
 
-### Using Method
+##### tmux
 
-暂无
+- 功能键为`Ctrl + x`
 
-### FAQ
+```shell
+tmux new -s tmp  # 新建名为tmp的终端
+tmux ^x d  # 退出保存终端
+tmux a -t tmp  # 进入名为tmp的终端
+```
 
-暂无
+##### vim
 
-### Version
+- `F8`  打开关闭小地图
+- `F2`  开启关闭目录
 
-暂无
+##### 其他
 
-### Link
+- auto jump
 
-- [mathiasbynens/dotfiles | Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
-- [alrra/dotfiles | macOS / Ubuntu dotfiles](https://github.com/alrra/dotfiles)
+```shell
+jc filename  # 直接跳转到文件目录
+```
 
-### Contributors
+- tree
 
-<!-- 感谢以下人员对本仓库做出的贡献，当然不仅仅只有这些贡献者，这里就不一一列举了。如果你希望被添加到这个名单中，并且提交过 Issue 或者 PR，请与我联系。 -->
-
-![暂无]()
+```shell
+tree filename  # 查看某文件夹树状展开
+```
 
 ### Copyright
 
