@@ -13,8 +13,20 @@
 sudo apt-get install tree
 sudo apt-get install ssh
 sudo apt-get install rar unrar
+sudo apt-get install zip unzip
 sudo apt-get install openssh-server
 sudo apt-get install autojump
+
+# eigen
+sudo apt-get install libeigen3-dev
+
+
+# ========== Tools ==========
+
+# Docker
+
+
+
 
 # ========== Language ==========
 
