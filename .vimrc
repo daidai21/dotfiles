@@ -41,14 +41,10 @@ set shiftwidth=4
 set autoindent
 " 设置粘贴模式
 set paste
-" 自动缩进
-set autoindent
 " 代码折叠
 set foldmethod=indent
 " Vim插入模式下Tab键缩进设置  按下Tab键时，输入到Vim中的都是空格
 set expandtab
-" 基于缩进进行代码折叠
-set foldmethod=indent  
 " 启动 Vim 时关闭折叠
 set nofoldenable  
 " 自动缩进
@@ -104,6 +100,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 autocmd VimEnter * NERDTree  " 自动开启NERDTree
 map <F2> :NERDTreeToggle<CR> " 按下F2调出/隐藏NERDTree
+
 " 自动补全插件
 Plugin 'Valloric/YouCompleteMe'
 " 状态栏
@@ -133,7 +130,7 @@ let g:tagbar_ctags_bin='/usr/bin/ctags'  "设置tagbar使用的ctags的插件,�
 autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()  " 打开文件自动 打开tagbar
 " 代码缩进显示
 Bundle 'Yggdroot/indentLine'
-let g:indentLine_char='┆'  " 设置缩进分隔符
+let g:indentLine_char='|'  " 设置缩进分隔符
 let g:indentLine_enabled = 1  " 开启插件
 " Python语法检查
 " Plugin 'nvie/vim-flake8'
