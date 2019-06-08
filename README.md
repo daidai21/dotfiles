@@ -49,12 +49,18 @@ tmux a -t tmp  # 进入名为tmp的终端
   - `ctrl w 方向`  切换窗口 
 - `:sp file_name`  上下分割窗口
 - `:vs file_name`  水平分割窗口
-- 切换文件
+- 切换文件 `buf`
   - `:bn`  下一个文件
   - `:bp`  上一个文件
   - `:bn`  切换到第n个文件
   - `ctrl 6`  切换文件
+- 切换窗口 `tab`
+  - `gt`  下一个窗口
+  - `gT`  上一个窗口
+  - `:tabe file_name`  打开一个新窗口
+  - `：tabc`  关闭窗口
 
+- `shift z z`  保存快速退出
 
 ##### 其他
 
