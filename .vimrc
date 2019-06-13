@@ -29,7 +29,9 @@ set showmatch
 " 打开语法高亮显示
 syntax on
 " 设置双宽显示,防止有些字体显示不全
-set ambiwidth=double 
+set ambiwidth=double
+" 设置json文件中的双引号默认显示
+let g:indentLine_conceallevel = 0
 
 
 " ***** 编辑相关 *****
