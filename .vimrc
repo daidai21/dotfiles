@@ -126,7 +126,7 @@ Plugin 'vim-syntastic/syntastic'
 " Plugin 'haya14busa/incsearch-fuzzy.vim'
 " 文件缩略图  但是使用TagBar之前先确保已经有ctags
 Plugin 'majutsushi/tagbar'
-map <F8> :TagbarToggle<CR>  " F8打开
+map <F9> :TagbarToggle<CR>  " F9打开
 let g:tagbar_width=30  " 设置tagbar的窗口宽度
 let g:tagbar_ctags_bin='/usr/bin/ctags'  "设置tagbar使用的ctags的插件,必须要设置对
 autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()  " 打开文件自动 打开tagbar
@@ -261,6 +261,13 @@ autocmd BufNewFile * normal G
 " =============================================================================
 
 
-" TODO:
+" 左右分割窗口的情况下，扩大窗口
+map <F5> <ESC><C-W>-
+" 左右分割窗口的情况下，缩小窗口
+map <F6> <ESC><C-W>+
+" 上下分割窗口的情况下，左移窗口
+map <F7> <ESC><C-W><
+" 上下分割窗口的情况下，右移窗口
+map <F8> <ESC><C-W>>
 
-" F5 run code
+
