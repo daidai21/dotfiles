@@ -37,6 +37,11 @@ tmux ^x d  # sign out and save terminal
 tmux a -t tmp  # get into named tmp
 ```
 
+- switch windows
+  - `prefix n` next windows
+  - `prefix p` previous windows
+  - `prefix c` create a new windows
+
 ##### vim
 
 - `F9`  open / close small map
