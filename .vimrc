@@ -14,6 +14,8 @@
 
 
 " ***** 显示相关 *****
+" 每行的第81个字符开始有提示
+autocmd FileType python match Underlined /\%>80v.*/
 " 显示行号
 set number
 " 突出显示当前行
@@ -151,7 +153,7 @@ call vundle#end()
 " 新建.c .h .cpp .hpp .cc .sh .java .py 文件，自动插入文件头
 autocmd BufNewFile *.c,*.h,*.cpp,*.hpp,*.cc,*.sh,*.java,*.py exec ":call SetTitle()" 
 " 定义函数SetTitle，自动插入文件头 
-func SetTitle()
+function! SetTitle()
     " bash 语言
     if expand("%:e") == 'sh'
         call setline(1,"\#!/bin/bash")
@@ -252,7 +254,7 @@ func SetTitle()
     endif
     " Java 语言
     " 新建文件后，自动定位到文件末尾
-endfunc
+endfunction
 autocmd BufNewFile * normal G
 
 
