@@ -14,8 +14,8 @@
 
 
 " ***** 显示相关 *****
-" 每行的第81个字符开始有提示
-autocmd FileType python match Underlined /\%>80v.*/
+" 每行的第80个字符开始有提示
+autocmd FileType python match Underlined /\%>79v.*/
 " 显示行号
 set number
 " 突出显示当前行
