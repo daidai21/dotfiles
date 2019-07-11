@@ -70,6 +70,9 @@ tmux a -t tmp  # get into named tmp
     - `F5` small, `F6` big
   - sp windows
     - `F7` small, `F8` big
+- fast copy paste
+  - `yy` fast copy one line
+  - `p` fast paste one line
 
 ##### Other Tool
 

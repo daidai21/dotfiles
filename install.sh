@@ -8,6 +8,18 @@
 # ================================================================================
 
 
+# NOTE:
+
+
+# mv old dotfiles
+mkdir ~/.old_dotfiles/
+sudo mv .vimrc ~/.old_dotfiles/
+sudo mv .bashrc ~/.old_dotfiles/
+sudo mv .tmux.conf ~/.old_dotfiles/
+sudo mv .bash_profile ~/.old_dotfiles/
+sudo mv .zshrc ~/.old_dotfiles/
+
+
 # ========== Linux library ==========
 
 sudo apt-get install tree
