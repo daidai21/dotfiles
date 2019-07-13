@@ -1,0 +1,9 @@
+[user]
+	name = daidai21
+	email = daidai4269@aliyun.com
+[credential]
+	helper = store
+
+# [https]
+# [http "https://github.com"]
+# 	proxy = socks5://127.0.0.1:1080
