@@ -14,17 +14,12 @@
 
 
 " ***** 显示相关 *****
-<<<<<<< HEAD
 
 
 " vim与系统粘贴板互通
-
-" 每行的第81个字符开始有提示
-autocmd FileType python match Underlined /\%>80v.*/
-=======
+" TODO
 " 每行的第80个字符开始有提示
 autocmd FileType python match Underlined /\%>79v.*/
->>>>>>> 6e65aa26b4805e76dfbd775073bea378f468db80
 " 显示行号
 set number
 " 突出显示当前行
@@ -183,37 +178,37 @@ function! SetTitle()
     if expand("%:e") == 'sh'
         call setline(1,"\#!/bin/bash")
         call append(line("."), "")
-        call append(line(".")+1, "# ================================================================================")
+        call append(line(".")+1, "# =============================================================================")
         call append(line(".")+2, "# File Name: ".expand("%"))
         call append(line(".")+3, "# Author: DaiDai")
         call append(line(".")+4, "# Mail: daidai4269@aliyun.com") 
         call append(line(".")+5, "# Created Time: ".strftime("%c"))
-        call append(line(".")+6, "# ================================================================================")
+        call append(line(".")+6, "# =============================================================================")
         call append(line(".")+7, "")
         call append(line(".")+8, "")
     endif
     " python 语言
     if expand("%:e") == 'py'
-        call setline(1,"#!/usr/bin/python")
+        call setline(1,"#!/usr/bin/env python3")
         call append(line("."),"# -*- coding:utf-8 -*-")
         call append(line(".")+1, "")
         call append(line(".")+2, "")
-        call append(line(".")+3, "# ================================================================================") 
+        call append(line(".")+3, "# =============================================================================") 
         call append(line(".")+4, "# File Name: ".expand("%")) 
         call append(line(".")+5, "# Author: DaiDai") 
         call append(line(".")+6, "# Mail: daidai4269@aliyun.com") 
         call append(line(".")+7, "# Created Time: ".strftime("%c"))
-        call append(line(".")+8, "# ================================================================================") 
+        call append(line(".")+8, "# =============================================================================") 
         call append(line(".")+9, "")
     endif
     " C++ 语言
     if expand("%:e") == 'cpp'
-        call setline(1,"/* ================================================================================")
+        call setline(1,"/* =============================================================================")
         call append(line("."),"> File Name: ".expand("%"))
         call append(line(".")+1, "> Author: DaiDai") 
         call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
         call append(line(".")+3, "> Created Time: ".strftime("%c"))
-        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+4, "============================================================================= */") 
         call append(line(".")+5, "")
         call append(line(".")+6, "")
         call append(line(".")+7, "#include <iostream>")
@@ -223,12 +218,12 @@ function! SetTitle()
         call append(line(".")+11, "")
     endif
     if expand("%:e") == 'hpp'
-        call setline(1,"/* ================================================================================")
+        call setline(1,"/* =============================================================================")
         call append(line("."),"> File Name: ".expand("%"))
         call append(line(".")+1, "> Author: DaiDai") 
         call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
         call append(line(".")+3, "> Created Time: ".strftime("%c"))
-        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+4, "============================================================================= */") 
         call append(line(".")+5, "")
         call append(line(".")+6, "")
         call append(line(".")+7, "#include <iostream>")
@@ -238,12 +233,12 @@ function! SetTitle()
         call append(line(".")+11, "")
     endif
     if expand("%:e") == 'cc'
-        call setline(1,"/* ================================================================================")
+        call setline(1,"/* =============================================================================")
         call append(line("."),"> File Name: ".expand("%"))
         call append(line(".")+1, "> Author: DaiDai") 
         call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
         call append(line(".")+3, "> Created Time: ".strftime("%c"))
-        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+4, "============================================================================= */") 
         call append(line(".")+5, "")
         call append(line(".")+6, "")
         call append(line(".")+7, "#include <iostream>")
@@ -254,24 +249,24 @@ function! SetTitle()
     endif
     " C 语言
     if expand("%:e") == 'c'
-        call setline(1,"/* ================================================================================")
+        call setline(1,"/* =============================================================================")
         call append(line("."),"> File Name: ".expand("%"))
         call append(line(".")+1, "> Author: DaiDai") 
         call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
         call append(line(".")+3, "> Created Time: ".strftime("%c"))
-        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+4, "============================================================================= */") 
         call append(line(".")+5, "")
         call append(line(".")+6, "")
         call append(line(".")+7, "#include <stdio.h>")
         call append(line(".")+8, "")
     endif
     if expand("%:e") == 'h'
-        call setline(1,"/* ================================================================================")
+        call setline(1,"/* =============================================================================")
         call append(line("."),"> File Name: ".expand("%"))
         call append(line(".")+1, "> Author: DaiDai") 
         call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
         call append(line(".")+3, "> Created Time: ".strftime("%c"))
-        call append(line(".")+4, "================================================================================ */") 
+        call append(line(".")+4, "============================================================================= */") 
         call append(line(".")+5, "")
         call append(line(".")+6, "")
         call append(line(".")+7, "#include <stdio.h>")
@@ -297,4 +292,5 @@ map <F7> <ESC><C-W><
 " 上下分割窗口的情况下，右移窗口
 map <F8> <ESC><C-W>>
 
-
+" Tab 自动补全
+" TODO
