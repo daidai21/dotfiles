@@ -41,7 +41,6 @@ set ambiwidth=double
 " 设置json文件中的双引号默认显示
 let g:indentLine_conceallevel = 0
 
-
 " ***** 编辑相关 *****
 " 设置Tab长度为4空格
 set tabstop=4
@@ -77,20 +76,24 @@ set hlsearch
 filetype plugin indent on
 " 打开文件类型检测
 filetype on
+" unix system file type
+set ff=unix
 
 " ***** 自动补全 *****
 set wildmenu
 set completeopt=longest,menu
 set completeopt=preview,menu
+set wildmenu
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType cpp set omnifunc=cppcomplete#Complete
 autocmd FileType c set omnifunc=ccomplete#Complete
-" autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-" autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-" autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType sh set omnifunc=shcomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType java set omnifunc=javacomplete#Complet
 " TODO: ctrl auto open && ignore some file && color configuration
-
+" TODO: auto complete brackets
 
 " ***** 其他设置 *****
 " 让vimrc配置变更立即生效
@@ -160,7 +163,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'nvie/vim-flake8'
 " 自动补全括号引号等
 " Plugin 'jiangmiao/auto-pairs'
-
+" TODO: ctags, taglist
 " ***** 结束 *****
 call vundle#end()
 
@@ -176,7 +179,7 @@ autocmd BufNewFile *.c,*.h,*.cpp,*.hpp,*.cc,*.sh,*.java,*.py exec ":call SetTitl
 function! SetTitle()
     " bash 语言
     if expand("%:e") == 'sh'
-        call setline(1,"\#!/bin/bash")
+        call setline(1,"\#!/usr/bin/env bash")
         call append(line("."), "")
         call append(line(".")+1, "# =============================================================================")
         call append(line(".")+2, "# File Name: ".expand("%"))
@@ -294,3 +297,6 @@ map <F8> <ESC><C-W>>
 
 " Tab 自动补全
 " TODO
+" F5 run
+" TODO: define a function
+
