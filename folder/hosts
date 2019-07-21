@@ -1,0 +1,19 @@
+127.0.0.1	localhost.localdomain	localhost
+# 127.0.0.1 localhost.localdomain 222.24.85.196
+::1		localhost6.localdomain6	localhost6
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+
+# Myself Add
+151.101.72.249  http://global-ssl.fastly.Net
+192.30.253.112  http://github.com
+# 192.30.255.112  http://github.com
+# 192.30.255.112  git
+# 104.18.34.28  leetcode.com
+# 104.18.35.28  leetcode.com
+
