@@ -8,6 +8,16 @@
 # ================================================================================
 
 
-rm -rf ~/.vim/
-rm ~/.vimrc
-rm ~/.tmux.conf
+# NOTE:
+
+
+# delete
+sudo rm -rf ~/.vim/
+sudo rm ~/.vimrc
+sudo rm ~/.tmux.conf
+sudo rm ~/.bashrc
+sudo rm ~/.bash_profile
+sudo rm ~/.zshrc
+# recovery pre dotfiles
+mv ~.pre_dotfiles/* ~/
+

@@ -8,72 +8,48 @@
 # ================================================================================
 
 
-# ========== Linux library ==========
-
-sudo apt-get install tree
-sudo apt-get install ssh
-sudo apt-get install rar unrar
-sudo apt-get install zip unzip
-sudo apt-get install openssh-server
-sudo apt-get install autojump
-
-# eigen
-sudo apt-get install libeigen3-dev
+# backup old config file
+mkdir ~/.old_dotfiles/
+sudo mv .vimrc ~/.old_dotfiles/
+sudo mv .bashrc ~/.old_dotfiles/
+sudo mv .tmux.conf ~/.old_dotfiles/
+sudo mv .bash_profile ~/.old_dotfiles/
+sudo mv .zshrc ~/.old_dotfiles/
 
 
-# ========== Tools ==========
+if which apt-get > /dev/null; then  # Ubuntu
+    # tool
+    sudo apt-get install tree ssh rar unrar zip unzip openssh-server autojump zsh
+    sudo apt-get install extundelete  # avoid error rm -rf
+    # CC
+    sudo apt-get install ctags cmake
+    # Py
+    conda install flake8 yapf pylint mypy
+    pip install -r requirements.txt
+    # nodejs
+    sudo apt-get install nodejs
+    sudo apt-get isntall npm
+    # zsh
+    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    zsh
+    # tmux
+    sudo apt-get install tmux
+    rm -rf ~/.tmux.conf
+    mv ~/dotfiles/.tmux.conf ~/.tmux.conf
+    # vim
+    sudo apt-get install vim
+    rm -rf ~/.vim
+    rm ~/.vimrc
+    mv ~/dotfiles/.vimrc ~/.vimrc
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim  # Vundle
 
-# Docker
+elif which yum > /dev/null; then  # Centos
+    # TODO
+elif which brew > /dev/null; then  # Mac
+    # TODO
+fi
 
-
-
-
-# ========== Language ==========
-
-sudo apt-get install ctags build-essential cmake python-dev python3-dev  # vim Plugin rely on
-
-# g++
-
-# Cmake
-sudo apt-get install cmake
-# clang
-
-# python
-sudo apt-get install mypy  # mypy
-
-# ========== zsh ==========
-
-# Install Zsh
-sudo apt-get install zsh
-# Install oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-# start-up oh-my-zsh
-zsh
-
-# ========== tmux ==========
-
-# Install tmux
-sudo apt-get install tmux
-# setting tmux
-rm -rf ~/.tmux.conf
-mv ~/dotfiles/.tmux.conf ~/.tmux.conf
-
-# ========== vim ==========
-
-# mv .vimrc file
-rm -rf ~/.vim
-rm ~/.vimrc
-mv ~/dotfiles/.vimrc ~/.vimrc
-# Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# Plugin Install
-echo "Plugin Install Start"
-vim tmp -c "BundleInstall" -c "q" -c "q"
-rm tmp
-~/.vim/bundle/YouCompleteMe/install.py --clang-completer  # Install YouCompleteMe
-echo "Plugin Install Completed!"
 
 # delete dotfiles
-sudo rm -r dotfiles
-
+sudo rm -rf ~/dotfiles
 echo "DaiDai' dotfiles install Completed!"

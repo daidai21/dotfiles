@@ -3,15 +3,21 @@
 
 ### Introduction
 
-note: Continuous updating!
+**note**: Continuous updating!
 
 `DaiDai's dotfiles` is a configuration file that creates a development environment with just one line of command.
 
-### Renderings
+![index](./img/index.png)
+
+### Feature
 
 - vim plug-in manager tool is Vundle
-- Supporting Environment `Ubuntu` & `Mac OS`
-- auto install zsh, tmux, vim, g++, clang, ssh, etc.
+- Support OS: Like-Unix (Ubuntu,MacOSX)
+- install:
+  - `zsh`, `tmux`, `vim`, `ssh`
+  - linux shell tool:
+    - `tree`
+    - `autojumpy`
 
 ### Install
 
@@ -19,7 +25,12 @@ note: Continuous updating!
 cd ~ && git clone -b tmp https://github.com/daidai21/dotfiles && cd ~/dotfiles && sudo install.sh
 ```
 
-### Function
+
+### Usage
+
+`folder/`: not in `~/folder/`, this is a temp folder.
+
+- `hosts`: in `/etc/`, config realm name and IP
 
 ##### Zsh
 
@@ -34,13 +45,16 @@ zsh  # using oh-my-zsh
 ```shell
 tmux new -s tmp  # create a new terminal named tmp
 tmux ^x d  # sign out and save terminal
-tmux a -t tmp  # get into named tmp
+tmux a -t tmp  # get into named tmp session
+tmux kill-session -t tmp  # kill tmp session
 ```
 
 - switch windows
   - `prefix n` next windows
   - `prefix p` previous windows
   - `prefix c` create a new windows
+- `shift mouse-right` + `click copy` copy
+- 
 
 ##### vim
 
@@ -70,6 +84,36 @@ tmux a -t tmp  # get into named tmp
     - `F5` small, `F6` big
   - sp windows
     - `F7` small, `F8` big
+- fast copy paste
+  - `yy` fast copy one line
+  - `p` fast paste one line
+- auto complete
+  - `ctrl p` open auto complete
+- `ctrl s` stop screen output
+- `ctrl q` recovery screen output
+
+- `:set fileformat=unix` or `:set ff=unix` change windows file format to linux/mac file format.
+- `:start_lines,end_lines>` indet
+- `:start_lines,end_lines<` retract   `Ctrl + d`
+
+- **Command mode**
+  - `G` go file end
+  - `gg` go file head
+  - `dd` delete current line
+  - `ndd`  delete from current line to n next line
+  - `yy` copy current line
+  - `nyy` copy from current line to n next line
+  - `p` paste in next line
+  - `P` paste in previous line
+  - `u` return previous step
+  - `ctrl r` return next step
+  - `.` repeat previous operator
+- **Last line mode**
+  - `:n1,n2s/word1/word2/g` from n1 to n2 change word1 to word2
+  - `:%s/word1/word2/g` change word1 to word2 in all file
+- **block selection mode** `ctrl + v`
+  - `shift + i`, input insert content, then `Esc Esc`
+  - `d`, then `Esc Esc`
 
 ##### Other Tool
 
@@ -79,9 +123,14 @@ jc filename  # fast to appoint name file
 
 # tree
 tree filename  # see file tree
+
+# avoid error rm -rf
+trash
+
+# (moss userid=662266874) check code repeat
+
 ```
 
-### Copyright
+### CopyRight
 
-Copyright to all individuals, reproduced please indicate the source!`Github@daidai21`
-
+For learning only, all remaining rights reserved by individuals.`Github@daidai21`
