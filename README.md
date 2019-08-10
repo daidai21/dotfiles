@@ -31,6 +31,7 @@ cd ~ && git clone -b tmp https://github.com/daidai21/dotfiles && cd ~/dotfiles &
 `folder/`: not in `~/folder/`, this is a temp folder.
 
 - `hosts`: in `/etc/`, config realm name and IP
+- `apt.conf` in `/etc/apt/`, config global proxy
 
 ##### Zsh
 
@@ -131,6 +132,10 @@ trash
 
 ```
 
+- man manual
+    - `man`
+- cman manual chinese language
+    - `cman`
 ### CopyRight
 
 For learning only, all remaining rights reserved by individuals.`Github@daidai21`

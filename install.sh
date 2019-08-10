@@ -22,7 +22,11 @@ if which apt-get > /dev/null; then  # Ubuntu
     sudo apt-get install tree ssh rar unrar zip unzip openssh-server autojump zsh
     sudo apt-get install extundelete  # avoid error rm -rf
     # CC
-    sudo apt-get install ctags cmake
+    sudo apt-get install ctags cmake gdb
+    sudo apt-get install manpages manpages-dev \
+                         manpages-de manpages-de-dev \
+                         manpages-posix manpages-posix-dev \
+                         manpages-zh glibc-doc  # manual
     # Py
     conda install flake8 yapf pylint mypy
     pip install -r requirements.txt

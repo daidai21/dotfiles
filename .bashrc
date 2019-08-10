@@ -7,3 +7,9 @@ alias mkdir='mkdir -m 700'
 # avoid error `rm -rf`
 alias rm=trash
 # TODO
+
+# proxy
+export http_proxy="https://127.0.0.1:1080"
+
+
+
