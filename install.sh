@@ -27,6 +27,7 @@ if which apt-get > /dev/null; then  # Ubuntu
                          manpages-de manpages-de-dev \
                          manpages-posix manpages-posix-dev \
                          manpages-zh glibc-doc  # manual
+    sudo apt-get install libboost-dev  # boost
     # Py
     conda install flake8 yapf pylint mypy
     pip install -r requirements.txt
@@ -46,7 +47,7 @@ if which apt-get > /dev/null; then  # Ubuntu
     rm ~/.vimrc
     mv ~/dotfiles/.vimrc ~/.vimrc
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim  # Vundle
-
+    # TODO: docker
 elif which yum > /dev/null; then  # Centos
     # TODO
 elif which brew > /dev/null; then  # Mac

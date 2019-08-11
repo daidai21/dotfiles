@@ -41,21 +41,23 @@ zsh  # using oh-my-zsh
 
 ##### Tmux
 
-- function key: `Ctrl + x`
-
-```shell
-tmux new -s tmp  # create a new terminal named tmp
-tmux ^x d  # sign out and save terminal
-tmux a -t tmp  # get into named tmp session
-tmux kill-session -t tmp  # kill tmp session
-```
-
-- switch windows
-  - `prefix n` next windows
-  - `prefix p` previous windows
-  - `prefix c` create a new windows
+- prefix key: `Ctrl + x`
+- command
+    - `tmux (new -s session_name -n window_name)`  create a new session
+    - `tmux ^x d`  sign out and save
+    - `tmux at (-t session_name)`  get into named tmp session
+    - `tmux ls`  show all session_name
+    - `tmux kill-session -t session_name`  kill tmp session
+- window
+  - `prefix n` next window
+  - `prefix p` previous window
+  - `prefix c` create a new window
+  - `prefix ,` rename current window
+- window pane
+  - `prefix %`  vertical split
+  - `prefix "`  horizontal split
+  - `prefix z`  maximize pane / recovery
 - `shift mouse-right` + `click copy` copy
-- 
 
 ##### vim
 
