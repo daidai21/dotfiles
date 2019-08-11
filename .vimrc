@@ -41,11 +41,23 @@ set ambiwidth=double
 " 设置json文件中的双引号默认显示
 let g:indentLine_conceallevel = 0
 
+" ***** 文件相关 *****
+" 必须的 打开文件的时候进行类型检测
+filetype plugin indent on
+" 打开文件类型检测
+filetype on
+" unix system file type
+set ff=unix
+
 " ***** 编辑相关 *****
-" 设置Tab长度为4空格
-set tabstop=4
-" 设置自动缩进长度为4空格
-set shiftwidth=4
+" 设置Tab长度 和 自动缩进长度
+if expand("%:e") == 'c' || expand("%:e") == 'h' || expand("%:e") == 'cc' || expand("%:e") == 'cpp' || expand("%:e") == 'hpp'
+    set tabstop=2
+    set shiftwidth=2
+else
+    set tabstop=4
+    set shiftwidth=4
+endif
 " 继承前一行的缩进方式，适用于多行注释
 set autoindent
 " 设置粘贴模式
@@ -70,14 +82,6 @@ set encoding=utf-8
 " ***** 搜索相关 *****
 " 搜索结果高亮
 set hlsearch
-
-" ***** 文件相关 *****
-" 必须的 打开文件的时候进行类型检测
-filetype plugin indent on
-" 打开文件类型检测
-filetype on
-" unix system file type
-set ff=unix
 
 " ***** 自动补全 *****
 set wildmenu
