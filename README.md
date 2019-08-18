@@ -32,6 +32,7 @@ cd ~ && git clone -b tmp https://github.com/daidai21/dotfiles && cd ~/dotfiles &
 
 - `hosts`: in `/etc/`, config realm name and IP
 - `apt.conf` in `/etc/apt/`, config global proxy
+- `sources.list` in `/etc/apt/`, config apt source
 
 ##### Zsh
 
@@ -138,6 +139,29 @@ trash
     - `man`
 - cman manual chinese language
     - `cman`
+
+- pip source settings
+
+`pip install xxx -i source_url` or `touch ~/.pip/pip.conf`
+
+```
+[global]
+index-url = source-url
+```
+
+```
+阿里云 https://mirrors.aliyun.com/pypi/simple/
+中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+豆瓣(douban) http://pypi.douban.com/simple/
+清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
+中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
+```
+
+
+- wget usage proxy
+
+`wget -e "http_proxy=http://127.0.0.1:8080" url`
+
 ### CopyRight
 
 For learning only, all remaining rights reserved by individuals.`Github@daidai21`
