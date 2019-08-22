@@ -9,19 +9,18 @@
 
 
 # VSCode config backup
-if which apt-get > /dev/null -o which yum > /dev/null;
-then  # Linux
-    cp ~/.config/Code/User/settings.json VSCode/settings.json
-    cp ~/.config/Code/User/locale.json VSCode/locale.json
-    cp ~/.config/Code/User/keybindings.json VSCode/keybindings.json
+if [ `uname -s` == "Darwin" ];
+then
+    echo "Mac"
+    cp ~/Library/Application Support/Code/User/settings.json .config/Code/User/settings.json
+    cp ~/Library/Application Support/Code/User/locale.json .config/Code/User/locale.json
+    cp ~/Library/Application Support/Code/User/keybindings.json .config/Code/User/keybindings_Mac.json
     code --list-extensions > extensions  # code --install-extension
-elif which brew > /dev/null;
-then  # Mac
-    cp ~/Library/Application Support/Code/User/settings.json VSCode/settings.json
-    cp ~/Library/Application Support/Code/User/locale.json VSCode/locale.json
-    cp ~/Library/Application Support/Code/User/keybindings.json VSCode/keybindings_Mac.json
-    code --list-extensions > extensions  # code --install-extension
-else
-    echo "OS: win"
-    # Path: %APPDATA%\Code\User\settings.json
+elif [ `uname -s` == "Linux" ];
+then
+    echo "Linux"
+    cp ~/.config/Code/User/settings.json .config/Code/User/settings.json
+    cp ~/.config/Code/User/locale.json .config/Code/User/locale.json
+    cp ~/.config/Code/User/keybindings.json .config/Code/User/keybindings.json
+    code --list-extensions > folder/extensions  # code --install-extension
 fi

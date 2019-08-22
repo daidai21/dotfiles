@@ -1,4 +1,3 @@
-// ubuntu
 {
     "window.zoomLevel": -1,
     "python.pythonPath": "/home/fwh/anaconda3/bin/python",
@@ -19,111 +18,14 @@
     "powermode.enabled": true,
     "workbench.startupEditor": "welcomePage",
     "latex-workshop.view.pdf.viewer": "tab",
-    "sync.gist": "5647759646a135d9a2f72b32efd2070f",
+    "sync.gist": "",
+    "latex-workshop.message.update.show": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "python.dataScience.sendSelectionToInteractiveWindow": false,
+    "cmake.configureOnOpen": true,
     // code runner settings c++ compile to *.out
     // "code-runner.executorMap": {
     //     "cpp": "g++ $fileName -o $fileNameWithoutExt.out -std=c++14 && ./$fileNameWithoutExt.out",
     // }
-
-}
-
-// win
-{
-    "window.zoomLevel": -1,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "editor.fontSize": 18,
-    "markdown-preview-enhanced.mermaidTheme": "default",
-    "python.pythonPath": "C:\\Users\\72863\\Anaconda3\\python.exe",
-    "markdown-preview-enhanced.mathRenderingOption": "MathJax",
-    "markdown-pdf.highlightStyle": "atelier-estuary-dark.css",
-    "markdown-pdf.includeDefaultStyles": false,
-    "markdown-preview-enhanced.codeBlockTheme": "default.css",
-    "markdown-preview-enhanced.frontMatterRenderingOption": "table",
-    "editor.detectIndentation": false,
-    "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "all",
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 500,
-    // matlab
-    "matlab.matlabpath": "D:\\安装的程序\\matlab2016\\bin\\matlab.exe",
-    "matlab.mlintpath": "D:\\安装的程序\\matlab2016\\bin\\win64\\mlint.exe",
-    "matlab.linterEncoding": "gbk",
-    "code-runner.executorMap": {
-        "javascript": "node",
-        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "php": "php",
-        "python": "python -u",
-        "perl": "perl",
-        "perl6": "perl6",
-        "ruby": "ruby",
-        "go": "go run",
-        "lua": "lua",
-        "groovy": "groovy",
-        "powershell": "powershell -ExecutionPolicy ByPass -File",
-        "bat": "cmd /c",
-        "shellscript": "bash",
-        "fsharp": "fsi",
-        "csharp": "scriptcs",
-        "vbscript": "cscript //Nologo",
-        "typescript": "ts-node",
-        "coffeescript": "coffee",
-        "scala": "scala",
-        "swift": "swift",
-        "julia": "julia",
-        "crystal": "crystal",
-        "ocaml": "ocaml",
-        "r": "Rscript",
-        "applescript": "osascript",
-        "clojure": "lein exec",
-        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-        "racket": "racket",
-        "ahk": "autohotkey",
-        "autoit": "autoit3",
-        "dart": "dart",
-        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-        "haskell": "runhaskell",
-        "nim": "nim compile --verbosity:0 --hints:off --run"
-    },
-    "editor.suggestSelection": "first",
-    "code-runner.runInTerminal": true,
-    "python.jediEnabled": false,
-    "latex-workshop.latex.autoClean.run": "onFailed",
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "cmake.configureOnOpen": true,
-    "markdown.extension.toc.githubCompatibility": true,
-    "markdown.extension.list.indentationSize": "inherit",
-    "powermode.enabled": true,
-    "markdown-pdf.displayHeaderFooter": false,
-    // 面包屑
-    // "breadcrumbs.enabled": true,
-    "markdown-pdf.margin.top": "1.5cm",
-    "markdown-pdf.margin.bottom": "1.5cm",
-    "markdown-pdf.margin.right": "1.5cm",
-    "markdown-pdf.margin.left": "1.5cm",
-    "sync.removeExtensions": false,
-    "sync.autoUpload": true,
-    "ignoreUploadFiles": [
-        "state.*",
-        "syncLocalSettings.json",
-        ".DS_Store",
-        "sync.lock",
-        "projects.json",
-        "projects_cache_vscode.json",
-        "projects_cache_git.json",
-        "projects_cache_svn.json",
-        "gpm_projects.json",
-        "gpm-recentItems.json"
-    ],
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
-    "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
-    },
 
 }
