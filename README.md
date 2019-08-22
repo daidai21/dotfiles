@@ -33,6 +33,7 @@ cd ~ && git clone -b tmp https://github.com/daidai21/dotfiles && cd ~/dotfiles &
 - `hosts`: in `/etc/`, config realm name and IP
 - `apt.conf` in `/etc/apt/`, config global proxy
 - `sources.list` in `/etc/apt/`, config apt source
+- `.kaggle/kaggle.json`, kaggle shell tool used download dataset.
 
 ##### Zsh
 
