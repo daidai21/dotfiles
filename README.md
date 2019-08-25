@@ -22,9 +22,8 @@
 ### Install
 
 ```shell
-cd ~ && git clone -b tmp https://github.com/daidai21/dotfiles && cd ~/dotfiles && sudo install.sh
+git clone -b tmp https://github.com/daidai21/dotfiles && sudo ./dotfiles/install.sh
 ```
-
 
 ### Usage
 
@@ -34,6 +33,13 @@ cd ~ && git clone -b tmp https://github.com/daidai21/dotfiles && cd ~/dotfiles &
 - `apt.conf` in `/etc/apt/`, config global proxy
 - `sources.list` in `/etc/apt/`, config apt source
 - `.kaggle/kaggle.json`, kaggle shell tool used download dataset.
+- `Dockerfile`, build basic ubuntu images
+
+##### Git
+
+- `git config core.fileMode false`
+- `git config --global core.fileMode false`
+
 
 ##### Zsh
 
@@ -51,14 +57,15 @@ zsh  # using oh-my-zsh
     - `tmux ls`  show all session_name
     - `tmux kill-session -t session_name`  kill tmp session
 - window
-  - `prefix n` next window
-  - `prefix p` previous window
-  - `prefix c` create a new window
-  - `prefix ,` rename current window
+    - `prefix n` next window
+    - `prefix p` previous window
+    - `prefix c` create a new window
+    - `prefix ,` rename current window
 - window pane
-  - `prefix %`  vertical split
-  - `prefix "`  horizontal split
-  - `prefix z`  maximize pane / recovery
+    - `prefix %`  vertical split
+    - `prefix "`  horizontal split
+    - `prefix z`  maximize pane / recovery
+    - `prefix(hold) + direction key`  adjust window pane size
 - `shift mouse-right` + `click copy` copy
 
 ##### vim
@@ -162,6 +169,10 @@ index-url = source-url
 - wget usage proxy
 
 `wget -e "http_proxy=http://127.0.0.1:8080" url`
+
+- process manager tool
+
+`supervisor`
 
 ### CopyRight
 

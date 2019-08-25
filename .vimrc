@@ -53,10 +53,10 @@ set ff=unix
 " 设置Tab长度 和 自动缩进长度
 if expand("%:e") == 'c' || expand("%:e") == 'h' || expand("%:e") == 'cc' || expand("%:e") == 'cpp' || expand("%:e") == 'hpp'
     set tabstop=2
-    set shiftwidth=2
+    set expandtab
 else
     set tabstop=4
-    set shiftwidth=4
+    set expandtab
 endif
 " 继承前一行的缩进方式，适用于多行注释
 set autoindent
