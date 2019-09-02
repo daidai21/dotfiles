@@ -29,6 +29,9 @@ if which apt-get > /dev/null; then  # Ubuntu
                          manpages-zh glibc-doc  # manual
     sudo apt-get install libboost-dev  # boost
     # Py
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/  # change source
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/  # change source
+    conda config --set show_channel_urls yes  # change source
     conda install flake8 yapf pylint mypy
     pip install -r requirements.txt
     # nodejs
