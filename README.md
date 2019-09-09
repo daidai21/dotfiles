@@ -107,6 +107,7 @@ zsh  # using oh-my-zsh
 - `:set fileformat=unix` or `:set ff=unix` change windows file format to linux/mac file format.
 - `:start_lines,end_lines>` indet
 - `:start_lines,end_lines<` retract   `Ctrl + d`
+- `:terminal`
 
 - **Command mode**
   - `G` go file end
@@ -173,6 +174,11 @@ index-url = source-url
 - process manager tool
 
 `supervisor`
+
+- [conky](https://github.com/brndnmtthws/conky)
+
+`sudo apt-get install conky`
+`killall conky`
 
 ### CopyRight
 
