@@ -133,7 +133,8 @@ Plugin 'VundleVim/Vundle.vim'
 " map <F2> :NERDTreeToggle<CR> " 按下F2调出/隐藏NERDTree
 
 " 自动补全插件
-" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe' " C++
+" Plugin 'davidhalter/jedi-vim' " Python
 " 状态栏
 " Plugin 'vim-airline/vim-airline'
 " let g:airline#extensions#tabline#enabled = 1  "tabline中当前buffer两端的分隔字符

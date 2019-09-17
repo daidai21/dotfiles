@@ -34,6 +34,7 @@ git clone -b tmp https://github.com/daidai21/dotfiles && sudo ./dotfiles/install
 - `sources.list` in `/etc/apt/`, config apt source
 - `.kaggle/kaggle.json`, kaggle shell tool used download dataset.
 - `Dockerfile`, build basic ubuntu images
+- [editorconfig](https://github.com/editorconfig/editorconfig-vscode)
 
 ##### Git
 
