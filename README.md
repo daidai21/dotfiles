@@ -5,24 +5,16 @@
 
 **note**: Continuous updating!
 
-`DaiDai's dotfiles` is a configuration file that creates a development environment with just one line of command.
+`DaiDai's dotfiles` is a configuration file that creates a (C++ / C, Python, AI)development environment with just one line of command.
+
+vim plug-in manager tool is Vundle. include bashic tool zsh, tmux, vim, ssh, sshfs, tree, autojump
 
 ![index](./img/index.png)
-
-### Feature
-
-- vim plug-in manager tool is Vundle
-- Support OS: Like-Unix (Ubuntu,MacOSX)
-- install:
-  - `zsh`, `tmux`, `vim`, `ssh`
-  - linux shell tool:
-    - `tree`
-    - `autojumpy`
 
 ### Install
 
 ```shell
-git clone -b tmp https://github.com/daidai21/dotfiles && sudo ./dotfiles/install.sh
+cd ~; git clone -b master https://github.com/daidai21/dotfiles && sudo ./dotfiles/install.sh
 ```
 
 ### Usage
@@ -41,7 +33,6 @@ git clone -b tmp https://github.com/daidai21/dotfiles && sudo ./dotfiles/install
 - `git config core.fileMode false`
 - `git config --global core.fileMode false`
 
-
 ##### Zsh
 
 ```shell
@@ -54,7 +45,7 @@ zsh  # using oh-my-zsh
 - command
     - `tmux (new -s session_name -n window_name)`  create a new session
     - `tmux ^x d`  sign out and save
-    - `tmux at (-t session_name)`  get into named tmp session
+    - `tmux a -t session_name)`  get into named tmp session
     - `tmux ls`  show all session_name
     - `tmux kill-session -t session_name`  kill tmp session
 - window
@@ -131,56 +122,34 @@ zsh  # using oh-my-zsh
 
 ##### Other Tool
 
-```shell
-# auto jump
-jc filename  # fast to appoint name file
-
-# tree
-tree filename  # see file tree
-
-# avoid error rm -rf
-trash
-
-# (moss userid=662266874) check code repeat
-
-```
-
+- `auto jump`  fast to appoint name file
+    - `jc filename`
+- `tree` see file tree
+    - `tree filename`
+- avoid error rm -rf
+    - `trash`
+- (moss userid=662266874) check code repeat
 - man manual
     - `man`
 - cman manual chinese language
     - `cman`
-
 - pip source settings
-
-`pip install xxx -i source_url` or `touch ~/.pip/pip.conf`
-
-```
-[global]
-index-url = source-url
-```
-
-```
-阿里云 https://mirrors.aliyun.com/pypi/simple/
-中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
-豆瓣(douban) http://pypi.douban.com/simple/
-清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
-中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
-```
-
-
+    - `pip install xxx -i source_url`
+    ```
+    阿里云 https://mirrors.aliyun.com/pypi/simple/
+    中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+    豆瓣(douban) http://pypi.douban.com/simple/
+    清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
+    中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
+    ```
 - wget usage proxy
-
-`wget -e "http_proxy=http://127.0.0.1:8080" url`
-
+    - `wget -e "http_proxy=http://127.0.0.1:8080" url`
 - process manager tool
-
-`supervisor`
-
+    - `supervisor`
 - [conky](https://github.com/brndnmtthws/conky)
-
-`sudo apt-get install conky`
-`killall conky`
+    `sudo apt-get install conky`
+    `killall conky`
 
 ### CopyRight
 
-For learning only, all remaining rights reserved by individuals.`Github@daidai21`
+For learning or personal user use only, all remaining rights reserved by individuals.`Github@daidai21`

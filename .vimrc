@@ -128,46 +128,46 @@ call vundle#begin()
 " 必须的 让Vundle管理Vundle
 Plugin 'VundleVim/Vundle.vim'
 " 目录树
-" Plugin 'scrooloose/nerdtree'
-" autocmd VimEnter * NERDTree  " 自动开启NERDTree
-" map <F2> :NERDTreeToggle<CR> " 按下F2调出/隐藏NERDTree
+Plugin 'scrooloose/nerdtree'
+autocmd VimEnter * NERDTree  " 自动开启NERDTree
+map <F2> :NERDTreeToggle<CR> " 按下F2调出/隐藏NERDTree
 
 " 自动补全插件
-" Plugin 'Valloric/YouCompleteMe' " C++
+Plugin 'Valloric/YouCompleteMe' " C++
 " Plugin 'davidhalter/jedi-vim' " Python
 " 状态栏
-" Plugin 'vim-airline/vim-airline'
-" let g:airline#extensions#tabline#enabled = 1  "tabline中当前buffer两端的分隔字符
-" let g:airline#extensions#tabline#left_sep = ' '  "tabline中未激活buffer两端的分隔字符
-" let g:airline#extensions#tabline#left_alt_sep = '|'  "tabline中buffer显示编号
-" let g:airline#extensions#tabline#buffer_nr_show = 1
+Plugin 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1  "tabline中当前buffer两端的分隔字符
+let g:airline#extensions#tabline#left_sep = ' '  "tabline中未激活buffer两端的分隔字符
+let g:airline#extensions#tabline#left_alt_sep = '|'  "tabline中buffer显示编号
+let g:airline#extensions#tabline#buffer_nr_show = 1
 " 状态栏主题
-" Plugin 'vim-airline/vim-airline-themes'
-" let g:airline_powerline_fonts = 1  " 设置字体
-" set t_Co=256 " 状态栏颜色
-" let g:airline_theme='molokai'  " 选择主题
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_powerline_fonts = 1  " 设置字体
+set t_Co=256 " 状态栏颜色
+let g:airline_theme='molokai'  " 选择主题
 " 语法检查
-" Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-syntastic/syntastic'
 " 拥有python几乎所有IDE的功能，吐血推荐 ，杀手级python插件
 " Plugin 'klen/python-mode'  " 有bug
 " 搜索插件
-" Plugin 'haya14busa/incsearch.vim'
+Plugin 'haya14busa/incsearch.vim'
 " 模糊搜索，自带搜索比较弱，这个模糊搜索很快速
-" Plugin 'haya14busa/incsearch-fuzzy.vim'
+Plugin 'haya14busa/incsearch-fuzzy.vim'
 " 文件缩略图  但是使用TagBar之前先确保已经有ctags
-" Plugin 'majutsushi/tagbar'
-" map <F9> :TagbarToggle<CR>  " F9打开
-" let g:tagbar_width=30  " 设置tagbar的窗口宽度
-" let g:tagbar_ctags_bin='/usr/bin/ctags'  "设置tagbar使用的ctags的插件,必须要设置对
-"autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()  " 打开文件自动 打开tagbar
+Plugin 'majutsushi/tagbar'
+map <F9> :TagbarToggle<CR>  " F9打开
+let g:tagbar_width=30  " 设置tagbar的窗口宽度
+let g:tagbar_ctags_bin='/usr/bin/ctags'  "设置tagbar使用的ctags的插件,必须要设置对
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()  " 打开文件自动 打开tagbar
 " 代码缩进显示
-" Bundle 'Yggdroot/indentLine'
-" let g:indentLine_char='|'  " 设置缩进分隔符
-"let g:indentLine_enabled = 1  " 开启插件
+Bundle 'Yggdroot/indentLine'
+let g:indentLine_char='|'  " 设置缩进分隔符
+let g:indentLine_enabled = 1  " 开启插件
 " Python语法检查
-" Plugin 'nvie/vim-flake8'
+Plugin 'nvie/vim-flake8'
 " 自动补全括号引号等
-" Plugin 'jiangmiao/auto-pairs'
+Plugin 'jiangmiao/auto-pairs'
 " TODO: ctags, taglist
 " ***** 结束 *****
 call vundle#end()
@@ -304,4 +304,3 @@ map <F8> <ESC><C-W>>
 " TODO
 " F5 run
 " TODO: define a function
-
