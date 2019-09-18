@@ -142,6 +142,7 @@ zsh  # using oh-my-zsh
     清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
     中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
     ```
+- [git extension](https://github.com/tj/git-extras)
 - wget usage proxy
     - `wget -e "http_proxy=http://127.0.0.1:8080" url`
 - process manager tool

@@ -30,6 +30,7 @@ then
     sudo apt-get install tree ssh rar unrar zip unzip openssh-server autojump zsh
     sudo apt-get install extundelete  # avoid error rm -rf
     sudo apt-get install htop  # sys moniter
+    sudo apt-get install git-extras  # git command extension tool
     # CC
     sudo apt-get install ctags cmake gdb
     sudo apt-get install manpages manpages-dev \
