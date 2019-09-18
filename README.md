@@ -167,6 +167,7 @@ index-url = source-url
 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
 ```
 
+- [git extension](https://github.com/tj/git-extras)
 
 - wget usage proxy
 
