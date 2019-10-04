@@ -1,3 +1,5 @@
 folder/Dockerfile
 supervisor config
 folder/.vscode config
+rsync
+
