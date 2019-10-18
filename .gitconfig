@@ -1,7 +1,7 @@
 [user]
     game = daidai21
-	email = daidai4269@aliyun.com
-	name = daidai21
+    email = daidai4269@aliyun.com
+    name = daidai21
 
 [credential]
     helper = store
@@ -40,9 +40,10 @@
 [core]
     excludesfile = ~/.gitignore
     editor = vim
+    fileMode = false
 
 # [http]
-# 	proxy = socks5://127.0.0.1:1080
+#     proxy = socks5://127.0.0.1:1080
 # [https]
-# 	proxy = socks5://127.0.0.1:1080
+#     proxy = socks5://127.0.0.1:1080
 
