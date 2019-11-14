@@ -56,6 +56,9 @@ then
     sudo apt-get install tmux
     rm -rf ~/.tmux.conf
     mv ~/dotfiles/.tmux.conf ~/.tmux.conf
+    # tmux plugin manager
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    # TODO: install plugin (Prefix + I)
     # vim
     sudo apt-get install vim
     rm -rf ~/.vim
