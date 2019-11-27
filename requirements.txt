@@ -2,4 +2,5 @@ moss  # code duplicate checking
 supervisor  # process manager
 flake8
 yapf
+pipreqs
 
