@@ -42,6 +42,8 @@
     "[hpp]": {
         "editor.tabSize": 2
     },
+    "editor.wordWrapColumn": 100,
+    "http.proxySupport": "off",
     // code runner settings c++ compile to *.out
     // "code-runner.executorMap": {
     //     "cpp": "g++ $fileName -o $fileNameWithoutExt.out -std=c++14 && ./$fileNameWithoutExt.out",

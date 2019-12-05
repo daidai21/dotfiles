@@ -5,6 +5,7 @@ DaGhostman.vs-treeview
 eamodio.gitlens
 formulahendry.code-runner
 foxundermoon.shell-format
+holmescn.vscode-wordcount-cjk
 hoovercj.vscode-power-mode
 James-Yu.latex-workshop
 koehlma.markdown-math
@@ -32,6 +33,7 @@ Shan.code-settings-sync
 shd101wyy.markdown-preview-enhanced
 tht13.python
 twxs.cmake
+unbug.codelf
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
 vscjava.vscode-java-test
