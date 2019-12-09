@@ -33,7 +33,10 @@ then
     sudo apt-get install git-extras  # git command extension tool
     sudo apt-get install sshfs  # mount remote directions
     sudo apt-get install supervisor  # process manager tool
+    sudo apt-get install sysstat
+    sudo apt-get install pstack
     # CC
+    sudo apt-get install g++ gcc clange
     sudo apt-get install ctags cmake gdb
     sudo apt-get install manpages manpages-dev \
                          manpages-de manpages-de-dev \
