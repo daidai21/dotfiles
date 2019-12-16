@@ -2,4 +2,6 @@ folder/Dockerfile
 supervisor config
 folder/.vscode config
 rsync
+jupyter(lab) git version contral
+jupyter(lab) plugin about C++/C, Shell
 

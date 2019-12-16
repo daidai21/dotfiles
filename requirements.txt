@@ -3,4 +3,6 @@ supervisor  # process manager
 flake8
 yapf
 pipreqs
+jupyter
+jupyterlab
 
