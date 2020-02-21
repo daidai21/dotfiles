@@ -1,13 +1,45 @@
 [user]
-	name = daidai21
-	email = daidai4269@aliyun.com
+    game = daidai21
+    email = daidai4269@aliyun.com
 [credential]
-	helper = store
+    helper = store
 
-# [https]
-# [http "https://github.com"]
+[alias]
+    a = add
+    b = branch
+    c = commit
+    co = checkout
+    d = diff
+    l = log --pretty=format:\"%h %ad | [%an] %s%d\" --graph --date=short
+    f = fetch
+    g = grep
+    h = help
+    i = init
+    m = merge
+    r = remote
+    s = status --branch --short
+    t = tag
+    w = whatchanged
+
+[color]
+    ui = always
+    status = auto
+    branch = auto
+    interactive = auto
+    diff = auto
+
+[merge]
+    tool = vimdiff
+
+[push]
+    default = upstream
+
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+
+# [http]
 # 	proxy = socks5://127.0.0.1:1080
-[http]
-	proxy = socks5://127.0.0.1:1080
-[https]
-	proxy = socks5://127.0.0.1:1080
+# [https]
+# 	proxy = socks5://127.0.0.1:1080
+

@@ -17,11 +17,21 @@ sudo mv .bash_profile ~/.old_dotfiles/
 sudo mv .zshrc ~/.old_dotfiles/
 
 
-if which apt-get > /dev/null; then  # Ubuntu
+# install
+if [[ `uname -a` =~ "Darwin" ]];
+then
+    echo "Mac OX"
+    echo "TODO: have not coding this install script!"
+elif [[ `uname -a` =~ "ubuntu" ]];
+then
+    echo "Ubuntu"
+    sudo apt-get update
     # tool
     sudo apt-get install tree ssh rar unrar zip unzip openssh-server autojump zsh
     sudo apt-get install extundelete  # avoid error rm -rf
+    sudo apt-get install htop  # sys moniter
     sudo apt-get install git-extras  # git command extension tool
+    sudo apt-get install sshfs  # mount remote directions
     # CC
     sudo apt-get install ctags cmake gdb
     sudo apt-get install manpages manpages-dev \
@@ -30,16 +40,17 @@ if which apt-get > /dev/null; then  # Ubuntu
                          manpages-zh glibc-doc  # manual
     sudo apt-get install libboost-dev  # boost
     # Py
+    wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh;bash Anaconda3-2019.07-Linux-x86_64.sh  # anaconda3
     conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/  # change source
     conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/  # change source
     conda config --set show_channel_urls yes  # change source
-    conda install flake8 yapf pylint mypy
     pip install -r requirements.txt
+    mv ~/dotfiles/.pip/.pip.conf ~/.pip/.pip.conf
     # nodejs
     sudo apt-get install nodejs
     sudo apt-get isntall npm
     # zsh
-    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    sudo sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     zsh
     # tmux
     sudo apt-get install tmux
@@ -52,10 +63,12 @@ if which apt-get > /dev/null; then  # Ubuntu
     mv ~/dotfiles/.vimrc ~/.vimrc
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim  # Vundle
     # TODO: docker
-elif which yum > /dev/null; then  # Centos
-    # TODO
-elif which brew > /dev/null; then  # Mac
-    # TODO
+elif [[ `uname -a` =~ "centos" ]];
+then
+    echo "Centos"
+    echo "TODO: have not coding this install script!"
+else
+    echo "ERROR: not find this OS version"
 fi
 
 
