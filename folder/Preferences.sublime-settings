@@ -1,0 +1,96 @@
+{
+    // font face
+    "font_face": "Consolas",
+    // font size
+    "font_size": 14,
+    // using auto pairing of quotes, brackets etc
+    "auto_match_enabled": true,
+    // 
+    "word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
+    // show line numbers
+    "line_numbers": true,
+    // show the line number sidebar
+    "gutter": true,
+    // spacing between the gutter and the text
+    "margin": 4,
+    // show folded text area
+    "fold_buttons": true,
+    // always show the fold button
+    "fade_fold_buttons": false,
+    // row width (or end-of-line prompt)
+    "rulers": [100],
+    // using spell check
+    "spell_check": true,
+    // tab size
+    "tab_size": 4,
+    // tab change to spaces
+    "translate_tabs_to_spaces": true,
+    // auto indent
+    "auto_indent": true,
+    // for C language
+    "smart_indent": true,
+    // code map with border
+    "draw_minimap_border": true,
+    // highlight current line
+    "highlight_line": true,
+    // cursor flashing mode
+    "caret_style": "wide",
+    // highlight the same word after double-clicking
+    "match_brackets": true,
+    "match_brackets_content": true,
+    "match_brackets_square": true,
+    "match_brackets_braces": true,
+    "match_brackets_angle": false,
+    "match_tags": true,  // for html, xml
+    "match_selection": true,
+    // line distance (or spacing)
+    "line_padding_bottom": 0,
+    "line_padding_top": 0,
+    // cancel the buffer when scrolling to the bottom of the page
+    "scroll_past_end": false,
+    // display displays Spaces as points
+    "draw_white_space": "all",
+    // display the white line of TAB alignment
+    "draw_indent_guides": true,
+    "indent_guide_options": ["draw_normal"],
+    // auto save
+    "save_on_focus_lost": true,
+    // default encoding
+    "default_encoding": "UTF-8",
+    // coding auto complete
+    "auto_complete": true,
+    // auto complete limit size
+    "auto_complete_size_limit": 4194304,
+    // code prompt delay display
+    "auto_complete_delay": 0,
+    // drag text
+    "drag_text": true,
+    "scroll_speed": 1,
+    // open folder tree animation
+    "tree_animation_enabled": true,
+    // highlight display not save file
+    "highlight_modified_tabs": true,
+    // display close button
+    "show_tab_close_buttons": true,
+    // bold folder file name
+    "bold_folder_labels": true,
+    // for MacOSX
+    "use_simple_full_screen": false,
+    // scroll bars
+    "overlay_scroll_bars": "enabled",
+    // remember open files
+    "remember_open_files": true,
+    // for MacOSX
+    "open_files_in_new_window": false,
+    "create_window_at_startup": true,
+    // for windows
+    "close_windows_when_empty": true,
+    // 
+    "show_full_path": true,
+    // 
+    "preview_on_click": false,
+    // 
+    "folder_exclude_patterns": [".svn", ".git"],  // [".svn", ".git", ".hg", "CVS"]
+    "file_exclude_patterns": [],  // ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db"]
+    "binary_file_patterns": []  // ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"]
+}

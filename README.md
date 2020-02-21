@@ -35,6 +35,7 @@ git clone -b tmp https://github.com/daidai21/dotfiles && sudo ./dotfiles/install
 - `.kaggle/kaggle.json`, kaggle shell tool used download dataset.
 - `Dockerfile`, build basic ubuntu images
 - [editorconfig](https://github.com/editorconfig/editorconfig-vscode)
+  `Preferences.sublime-settings` is simple config file in sublime text2, no usage plugin.
 
 ##### Git
 
