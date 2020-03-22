@@ -32,7 +32,11 @@ then
     sudo apt-get install htop  # sys moniter
     sudo apt-get install git-extras  # git command extension tool
     sudo apt-get install sshfs  # mount remote directions
+    sudo apt-get install supervisor  # process manager tool
+    sudo apt-get install sysstat
+    sudo apt-get install pstack
     # CC
+    sudo apt-get install g++ gcc clange
     sudo apt-get install ctags cmake gdb
     sudo apt-get install manpages manpages-dev \
                          manpages-de manpages-de-dev \
@@ -56,6 +60,9 @@ then
     sudo apt-get install tmux
     rm -rf ~/.tmux.conf
     mv ~/dotfiles/.tmux.conf ~/.tmux.conf
+    # tmux plugin manager
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    # TODO: install plugin (Prefix + I)
     # vim
     sudo apt-get install vim
     rm -rf ~/.vim

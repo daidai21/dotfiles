@@ -279,9 +279,17 @@ function! SetTitle()
         call append(line(".")+6, "")
         call append(line(".")+7, "#include <stdio.h>")
         call append(line(".")+8, "")
-    endif
     " Java 语言
-    " 新建文件后，自动定位到文件末尾
+    if expand("%:e") == 'java'
+        call setline(1, "/* =============================================================================")
+        call append(line("."),"> File Name: ".expand("%"))
+        call append(line(".")+1, "> Author: DaiDai") 
+        call append(line(".")+2, "> Mail: daidai4269@aliyun.com") 
+        call append(line(".")+3, "> Created Time: ".strftime("%c"))
+        call append(line(".")+4, "============================================================================= */") 
+        call append(line(".")+5, "")
+        call append(line(".")+6, "")
+    endif
 endfunction
 autocmd BufNewFile * normal G
 
