@@ -1,7 +1,6 @@
 [user]
-    game = daidai21
-    email = daidai4269@aliyun.com
     name = daidai21
+    email = daidai4269@aliyun.com
 
 [credential]
     helper = store
