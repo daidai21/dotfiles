@@ -5,7 +5,9 @@
     "files.insertFinalNewline": true,
     "editor.fontSize": 16,
     "python.linting.flake8Enabled": false,
-    "python.linting.flake8Args": ["--max-line-length=248"],
+    "python.linting.flake8Args": [
+        "--max-line-length=248"
+    ],
     "python.linting.pylintEnabled": false,
     "editor.renderWhitespace": "all",
     "files.autoSave": "afterDelay",
@@ -23,12 +25,14 @@
     "vsicons.dontShowNewVersionMessage": true,
     "python.dataScience.sendSelectionToInteractiveWindow": false,
     "cmake.configureOnOpen": true,
-    "[python]": {
-    },
-    "editor.rulers": [80],  // 显示垂直标尺的列,80字符的ruler
+    "[python]": {},
+    "editor.rulers": [
+        80
+    ], // 显示垂直标尺的列,80字符的ruler
     // tab size for diff file
     "[c]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "ms-vscode.cpptools",
     },
     "[h]": {
         "editor.tabSize": 2
@@ -37,16 +41,181 @@
         "editor.tabSize": 2
     },
     "[cpp]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "[hpp]": {
         "editor.tabSize": 2
     },
     "editor.wordWrapColumn": 100,
     "http.proxySupport": "off",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tree.renderIndentGuides": "always",
+    "java.requirements.JDK11Warning": false,
+    "python.languageServer": "Microsoft",
+    "debug.onTaskErrors": "debugAnyway",
+    "sourcetrail.startServerAtStartup": true,
+    "java.semanticHighlighting.enabled": true,
+    "[java]": {
+        "editor.defaultFormatter": "georgewfraser.vscode-javac"
+    },
     // code runner settings c++ compile to *.out
     // "code-runner.executorMap": {
     //     "cpp": "g++ $fileName -o $fileNameWithoutExt.out -std=c++14 && ./$fileNameWithoutExt.out",
     // }
-
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    // "workbench.colorTheme": "One Dark Pro",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2tex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2texmintex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "--synctex",
+                "--keep-logs",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdf->bib->pdf->pdf",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "vscode_custom_css.imports": [
+        // "file:///Users/fwh/.vscode/tabs-wrapper.css"
+        "file:///Users/fwh/Documents/vscode_config/tabs-wrapper.css"
+    ],
+    "vscode_custom_css.policy": true,
+    "workbench.editor.enablePreview": false,
+    // "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    // "java.format.settings.profile": "GoogleStyle",
+    // "java.format.enabled": true,
 }
+
