@@ -26,6 +26,8 @@
 
     lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 
+    root = rev-parse --show-toplevel
+
 [color]
     ui = always
     status = auto
