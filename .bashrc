@@ -13,4 +13,5 @@ export http_proxy="https://127.0.0.1:1080"
 
 
 # jump to git repository root path
-alias cd-git-root='cd $(git rev-parse --show-cdup)'
+alias cd-git-root="cd \"$(git rev-parse --show-toplevel)\""
+
