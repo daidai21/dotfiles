@@ -14,6 +14,7 @@
     d = diff
     df = diff --stat
     l = log --pretty=format:\"%h %ad | [%an] %s%d\" --graph --date=short
+    lm = log --merges --oneline  --pretty=format:\"%h %ad | [%an] %s%d\" --graph  --date=short
     f = fetch
     g = grep
     h = help
