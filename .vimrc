@@ -312,3 +312,18 @@ map <F8> <ESC><C-W>>
 " TODO
 " F5 run
 " TODO: define a function
+
+" =============================================================================
+" =============================================================================
+
+
+func! Run()                                               " run function
+    let type = b:current_syntax
+    if type == "c"
+        exec "!gcc % -std=c11 -pthread; ./a.out"
+    elseif type == "cpp" || type == "cc"
+        exec "!g++ % -std=c++11 -pthread ; ./a.out"
+    elseif type == "python"
+        exec "!python %"
+    endif
+endfunc

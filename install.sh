@@ -70,6 +70,12 @@ then
     mv ~/dotfiles/.vimrc ~/.vimrc
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim  # Vundle
     # TODO: docker
+
+    sudo apt-get install colordiff
+
+    # multi GCC G++ CLANG version
+    sudo apt install build-essential
+
 elif [[ `uname -a` =~ "centos" ]];
 then
     echo "Centos"
