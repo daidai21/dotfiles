@@ -1,0 +1,4 @@
+导出插件：    code --list-extensions
+code --list-extensions
+code --install-extension ms-vscode.cpptools
+code --uninstall-extension ms-vscode.csharp
