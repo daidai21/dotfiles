@@ -10,9 +10,11 @@
     a = add
     b = branch
     c = commit
+    cm = commit -m
     co = checkout
     d = diff
     df = diff --stat
+    dt = difftool
     l = log --pretty=format:\"%h %ad | [%an] %s%d\" --graph --date=short
     lm = log --merges --oneline  --pretty=format:\"%h %ad | [%an] %s%d\" --graph  --date=short
     f = fetch
