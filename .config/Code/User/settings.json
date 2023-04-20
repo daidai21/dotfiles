@@ -219,5 +219,6 @@
     // "java.format.enabled": true,
 
     "workbench.editor.wrapTabs": true,
+    "editor.wordWrap": "on", // 开启换行， 一行太长的话本身会自动折叠 省略 就看不全了
 }
 
