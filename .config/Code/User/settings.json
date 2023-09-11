@@ -219,13 +219,12 @@
     // "java.format.enabled": true,
 
     "workbench.editor.wrapTabs": true,
-<<<<<<< HEAD
 
     // vscode多个窗口显示多个选项卡/Tabs（仅支持 Mac）
     // https://juejin.cn/post/7063666642051399688
     "window.nativeTabs": true,
-=======
-    "editor.wordWrap": "on", // 开启换行， 一行太长的话本身会自动折叠 省略 就看不全了
->>>>>>> 6bed81d53b345c5ad4cacd6d20ac10de6d5534c1
+
+    // 开启换行， 一行太长的话本身会自动折叠 省略 就看不全了
+    "editor.wordWrap": "on", 
 }
 
