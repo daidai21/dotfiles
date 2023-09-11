@@ -219,5 +219,9 @@
     // "java.format.enabled": true,
 
     "workbench.editor.wrapTabs": true,
+
+    // vscode多个窗口显示多个选项卡/Tabs（仅支持 Mac）
+    // https://juejin.cn/post/7063666642051399688
+    "window.nativeTabs": true,
 }
 
