@@ -44,6 +44,9 @@
     excludesfile = ~/.gitignore
     editor = vim
     fileMode = false
+	quotepath = false
+	autocrlf = input
+
 
 # [http]
 #     proxy = socks5://127.0.0.1:1080
