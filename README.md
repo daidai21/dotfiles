@@ -59,6 +59,7 @@ zsh  # using oh-my-zsh
     - `prefix "`  horizontal split
     - `prefix z`  maximize pane / recovery
     - `prefix(hold) + direction key`  adjust window pane size
+    - `prefix x` close current pane
 - `shift mouse-right` + `click copy` copy
 
 ##### vim
