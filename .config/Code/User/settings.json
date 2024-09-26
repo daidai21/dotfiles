@@ -226,5 +226,9 @@
 
     // 开启换行， 一行太长的话本身会自动折叠 省略 就看不全了
     "editor.wordWrap": "on", 
+
+    // plantuml展示图的
+    "markdown-preview-enhanced.plantumlServer": "https://www.plantuml.com/plantuml/svg/"
+
 }
 
